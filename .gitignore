@@ -1,0 +1,11 @@
+.assets
+.idea
+.vscode
+**/venv/
+**/temp/
+**/outputs/*.jpg
+**/__pycache__/
+**/pyvenv.cfg
+**/local_cache/
+**/*.DS_Store
+**/*.onnx
