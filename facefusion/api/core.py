@@ -37,7 +37,7 @@ def save_file(file_path: str, encoded_data: str):
 
 
 def apply_args():
-    from facefusion.vision import is_image, is_video, detect_image_resolution, detect_video_resolution, create_image_resolutions, create_video_resolutions, pack_resolution
+    from facefusion.vision import is_image, is_video, detect_image_resolution, detect_video_resolution, detect_video_fps, create_image_resolutions, create_video_resolutions, pack_resolution
     from facefusion.normalizer import normalize_fps
     if is_image(globals.target_path):
         output_image_resolution = detect_image_resolution(globals.target_path)
