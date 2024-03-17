@@ -343,7 +343,7 @@ def process_video(start_time : float) -> None:
 	# handle audio
 	if facefusion.globals.skip_audio:
 		logger.info(wording.get('skipping_audio'), __name__.upper())
-		move_temp(facefusion.globals.target_path, normed_output_path)
+		# move_temp(facefusion.globals.target_path, normed_output_path)
 	else:
 		if 'lip_syncer' in facefusion.globals.frame_processors:
 			source_audio_path = get_first(filter_audio_paths(facefusion.globals.source_paths))
@@ -353,7 +353,7 @@ def process_video(start_time : float) -> None:
 				if is_process_stopping():
 					return
 				logger.warn(wording.get('restoring_audio_skipped'), __name__.upper())
-				move_temp(facefusion.globals.target_path, normed_output_path)
+				# move_temp(facefusion.globals.target_path, normed_output_path)
 		else:
 			if restore_audio(facefusion.globals.target_path, normed_output_path, facefusion.globals.output_video_fps):
 				logger.debug(wording.get('restoring_audio_succeed'), __name__.upper())
@@ -361,7 +361,7 @@ def process_video(start_time : float) -> None:
 				if is_process_stopping():
 					return
 				logger.warn(wording.get('restoring_audio_skipped'), __name__.upper())
-				move_temp(facefusion.globals.target_path, normed_output_path)
+				# move_temp(facefusion.globals.target_path, normed_output_path)
 	# clear temp
 	logger.debug(wording.get('clearing_temp'), __name__.upper())
 	clear_temp(facefusion.globals.target_path)

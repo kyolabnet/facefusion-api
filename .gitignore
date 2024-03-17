@@ -9,3 +9,4 @@
 **/local_cache/
 **/*.DS_Store
 **/*.onnx
+**/output/
